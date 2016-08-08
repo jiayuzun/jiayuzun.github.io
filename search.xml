@@ -4,6 +4,17 @@
   
     
     <entry>
+      <title><![CDATA[将博客从jekyll迁移到Hexo]]></title>
+      <url>http://yoursite.com/2016/08/08/%E5%B0%86%E5%8D%9A%E5%AE%A2%E4%BB%8Ejekyll%E8%BF%81%E7%A7%BB%E5%88%B0Hexo/</url>
+      <content type="html"><![CDATA[<p><a href="https://hexo.io/" target="_blank" rel="external">HEXO官网</a> 与 <a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT官网</a><br>这两个官网可以解决所有问题<br><a id="more"></a></p>
+<h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>本来只是想上网看看jekyll进阶教程，改一改自己的博客，添加一些个性化的元素，<br>奈何jekyll对新手真是太不友好了，本来写博客就是为了巩固暑假的学的一些算法，并没有时间去仔细琢磨jekyll。<br>后来发现网上一大堆“从jekyll迁移到HEXO“的博客，再我自己浏览了一些HEXO的模板，<br>小清新的风格和便于上手的操作吸引了我，于是便有了这一番的折腾。</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>HEXO确实比jekyll好上手的多，花点心思看看<a href="https://hexo.io/" target="_blank" rel="external">HEXO官网</a>，搭建博客遇到的问题基本都能在官网找<br>到答案。具体的一些指令我也不一一在本文中记录了，去官网浏览远比看我记录的指令要好。<br>搭建博客过程中含参考了另一篇博客<a href="http://www.alonemonkey.com/2016/05/20/blog-by-jekyll-hexo/" target="_blank" rel="external">使用jekyll和hexo搭建免费博客</a>,<br>这个博客本身就是用HEXO搭建的，它分别介绍了用jekyll和HEXO搭建博客的过程，讲解的非常详细，易上手。<br>博客配置过程中全靠<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT官网</a>,各种插件各种参数都一一举例，我也是将官网整个的看了一遍。  </p>
+<h2 id="文档迁移"><a href="#文档迁移" class="headerlink" title="文档迁移"></a>文档迁移</h2><p>把<code>_posts</code>文件夹内的所有文件复制到<code>source/_posts</code>文件夹，并在<code>_config.yml</code>中修改<code>new_post_name</code>参数。</p>
+<pre><code>new_post_name: :year-:month-:day-:title.md
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Hello World]]></title>
       <url>http://yoursite.com/2016/08/07/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
