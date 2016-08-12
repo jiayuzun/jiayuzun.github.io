@@ -54,7 +54,8 @@
 <blockquote>
 <p>S-&gt;A-&gt;B-&gt;C 返回B<br>B-&gt;D-&gt;E 返回A<br>A-&gt;F 返回S<br>S-&gt;H-&gt;I-&gt;J 返回I<br>I-&gt;K 返回H<br>H-&gt;L-G 结束</p>
 </blockquote>
-<h3 id="模板请见例题。"><a href="#模板请见例题。" class="headerlink" title="模板请见例题。"></a>模板请见例题。</h3>]]></content>
+<h3 id="模板请见例题。"><a href="#模板请见例题。" class="headerlink" title="模板请见例题。"></a>模板请见例题。</h3><p><a href="https://jiayuzun.github.io/2016/08/12/poj-1979/" target="_blank" rel="external">POJ 1979</a></p>
+]]></content>
     </entry>
     
     <entry>
