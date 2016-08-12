@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ACM,题目,POJ," />
 
 
 
@@ -96,15 +96,16 @@
 
 
 
-<meta name="description" content="本站记录我学习之旅的沿途风景！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to JYZ's Blog!">
-<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta name="description" content="DFS模板题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="poj 1979 Red and Black">
+<meta property="og:url" content="http://yoursite.com/2016/08/12/poj-1979/index.html">
 <meta property="og:site_name" content="Welcome to JYZ's Blog!">
-<meta property="og:description" content="本站记录我学习之旅的沿途风景！">
+<meta property="og:description" content="DFS模板题">
+<meta property="og:updated_time" content="2016-08-12T08:58:34.862Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome to JYZ's Blog!">
-<meta name="twitter:description" content="本站记录我学习之旅的沿途风景！">
+<meta name="twitter:title" content="poj 1979 Red and Black">
+<meta name="twitter:description" content="DFS模板题">
 
 
 
@@ -125,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/page/3/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/08/12/poj-1979/"/>
 
-  <title> Welcome to JYZ's Blog! </title>
+  <title> poj 1979 Red and Black | Welcome to JYZ's Blog! </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -158,9 +159,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -280,9 +279,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -302,10 +301,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/08/04/tarjan-template/" itemprop="url">
-                  Tarjan离线算法 模板
-                </a>
+                poj 1979 Red and Black
               
             
           </h1>
@@ -317,8 +313,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-04T15:20:34+08:00" content="2016-08-04">
-              2016-08-04
+            <time itemprop="dateCreated" datetime="2016-08-12T16:43:43+08:00" content="2016-08-12">
+              2016-08-12
             </time>
           </span>
 
@@ -331,8 +327,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/LCA（最近公共祖先）/" itemprop="url" rel="index">
-                    <span itemprop="name">LCA（最近公共祖先）</span>
+                  <a href="/categories/DFS/" itemprop="url" rel="index">
+                    <span itemprop="name">DFS</span>
                   </a>
                 </span>
 
@@ -347,8 +343,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/04/tarjan-template/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/04/tarjan-template/" itemprop="commentsCount"></span>
+                <a href="/2016/08/12/poj-1979/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/12/poj-1979/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -358,7 +354,7 @@
 
           
           
-             <span id="/2016/08/04/tarjan-template/" class="leancloud_visitors" data-flag-title="Tarjan离线算法 模板">
+             <span id="/2016/08/12/poj-1979/" class="leancloud_visitors" data-flag-title="poj 1979 Red and Black">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -380,308 +376,112 @@
       
 
       
-        
-          <p>本文介绍的是LCA算法中的tarjan离线算法。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/04/tarjan-template/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+        <p>DFS模板题</p>
+<a id="more"></a>
+<p>题目链接<a href="http://poj.org/problem?id=1979" target="_blank" rel="external">POJ 1979</a></p>
+<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>给你一个矩阵，’@’表示起始点，’.’代表能走的路，’#’代表障碍，求最多能走的格子数。</p>
+<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">char</span> a[<span class="number">25</span>][<span class="number">25</span>],vis[<span class="number">25</span>][<span class="number">25</span>];</div><div class="line"><span class="keyword">int</span> m,n,sum=<span class="number">1</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">jc</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y )</span><span class="comment">//判断是否出界</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">return</span> x&gt;=<span class="number">1</span>&amp;&amp;x&lt;=m&amp;&amp;y&gt;=<span class="number">1</span>&amp;&amp;y&lt;=n;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">if</span>(vis[x][y]) <span class="comment">//判断是否遍历过</span></div><div class="line">                <span class="keyword">return</span>;</div><div class="line">        vis[x][y]=<span class="number">1</span>;</div><div class="line">        sum++;</div><div class="line">		<span class="comment">// 从四个方向遍历，也可使用方向数组</span></div><div class="line">        <span class="keyword">if</span>(jc(x+<span class="number">1</span>,y)&amp;&amp;a[x+<span class="number">1</span>][y]==a[x][y]) dfs(x+<span class="number">1</span>,y);</div><div class="line">        <span class="keyword">if</span>(jc(x,y+<span class="number">1</span>)&amp;&amp;a[x][y+<span class="number">1</span>]==a[x][y]) dfs(x,y+<span class="number">1</span>);</div><div class="line">        <span class="keyword">if</span>(jc(x<span class="number">-1</span>,y)&amp;&amp;a[x<span class="number">-1</span>][y]==a[x][y]) dfs(x<span class="number">-1</span>,y);</div><div class="line">        <span class="keyword">if</span>(jc(x,y<span class="number">-1</span>)&amp;&amp;a[x][y<span class="number">-1</span>]==a[x][y]) dfs(x,y<span class="number">-1</span>);</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line"></div><div class="line">        <span class="keyword">while</span>(<span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n,&amp;m),m||n)</div><div class="line">        &#123;</div><div class="line">                <span class="keyword">int</span> i,j,d,f,k=<span class="number">0</span>;</div><div class="line">                <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=m;i++)</div><div class="line">                &#123;</div><div class="line">                        <span class="built_in">scanf</span>(<span class="string">"%s"</span>,a[i]+<span class="number">1</span>);</div><div class="line">                &#125;</div><div class="line">				<span class="built_in">memset</span>(vis,<span class="number">0</span>,<span class="keyword">sizeof</span>(vis));</div><div class="line">                <span class="keyword">for</span>(i=<span class="number">1</span>;i&lt;=m;i++)</div><div class="line">                &#123;</div><div class="line">                        <span class="keyword">for</span>(j=<span class="number">1</span>;j&lt;=n;j++)</div><div class="line">                        &#123;</div><div class="line">                                <span class="keyword">if</span>(a[i][j]==<span class="string">'@'</span>)</div><div class="line">                                &#123;</div><div class="line">                                        a[i][j]=<span class="string">'.'</span>;</div><div class="line">                                        d=i;f=j;</div><div class="line"></div><div class="line">                                &#125;</div><div class="line">                        &#125;</div><div class="line">                &#125;</div><div class="line">                sum=<span class="number">0</span>;</div><div class="line">                dfs(d,f);</div><div class="line">                k=sum;</div><div class="line">                <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,k);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="https://raw.githubusercontent.com/jiayuzun/photo/master/%E4%BA%8C%E7%BB%B4%E7%A0%81/wechatpay.jpg" alt="JYZ WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="https://raw.githubusercontent.com/jiayuzun/photo/master/%E4%BA%8C%E7%BB%B4%E7%A0%81/alipay.jpg" alt="JYZ Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/03/LCA-RMQ-ST-Template/" itemprop="url">
-                  LCA-RMQ-ST 模板
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-03T22:36:44+08:00" content="2016-08-03">
-              2016-08-03
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/LCA（最近公共祖先）/" itemprop="url" rel="index">
-                    <span itemprop="name">LCA（最近公共祖先）</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
+            <a href="/tags/ACM/" rel="tag">#ACM</a>
           
-
+            <a href="/tags/题目/" rel="tag">#题目</a>
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/03/LCA-RMQ-ST-Template/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/03/LCA-RMQ-ST-Template/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/08/03/LCA-RMQ-ST-Template/" class="leancloud_visitors" data-flag-title="LCA-RMQ-ST 模板">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
+            <a href="/tags/POJ/" rel="tag">#POJ</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>LCA分为在线算法和离线算法，这里介绍的是在线算法中的ST算法。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/03/LCA-RMQ-ST-Template/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/08/将博客从jekyll迁移到Hexo/" rel="next" title="将博客从jekyll迁移到Hexo">
+                <i class="fa fa-chevron-left"></i> 将博客从jekyll迁移到Hexo
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/03/first-blog/" itemprop="url">
-                  我的第一篇博客
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-03T11:09:32+08:00" content="2016-08-03">
-              2016-08-03
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/GitHub/" itemprop="url" rel="index">
-                    <span itemprop="name">GitHub</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/03/first-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/03/first-blog/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-             <span id="/2016/08/03/first-blog/" class="leancloud_visitors" data-flag-title="我的第一篇博客">
-               &nbsp; | &nbsp;
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               <span class="post-meta-item-text">阅读次数 </span>
-               <span class="leancloud-visitors-count"></span>
-              </span>
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h2 id="序"><a href="#序" class="headerlink" title="序"></a>序</h2><p>一直以来都想搭建一个自己的博客，但又不想简单的从博客园或CSDN创建账号，<br>通过GitHub education第一次了解到GitHub，便萌发了通过GitHub pages搭建静态博客的念头。</p>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/08/03/first-blog/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
-  </nav>
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
 
+      
+    </div>
+  </div>
 
 
           </div>
@@ -689,6 +489,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/08/12/poj-1979/"
+           data-title="poj 1979 Red and Black" data-url="http://yoursite.com/2016/08/12/poj-1979/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -708,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -779,6 +596,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目大意"><span class="nav-number">1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC代码"><span class="nav-number">2.</span> <span class="nav-text">AC代码</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -875,6 +703,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
