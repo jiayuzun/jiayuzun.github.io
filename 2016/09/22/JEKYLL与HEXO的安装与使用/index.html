@@ -102,7 +102,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/09/22/JEKYLL与HEXO的安装与使用/index.html">
 <meta property="og:site_name" content="Welcome to JYZ's Blog!">
 <meta property="og:description" content="本来没打算写这篇博客的，以为这些东西弄成功就算是会了，但当我想打开jekyll服务器的时候，突发现我已经忘记JEKYLL是怎么下载怎么使用的了。仔细想了想，当初安装的时候也是经历了不少曲折的，看了不少文章才解决的。由此可见记录的重要性，只有记录了下来，当忘记的时候才能方便的查看，而不用问度娘或者一遍一遍的翻看着官网的文档了。">
-<meta property="og:updated_time" content="2016-09-22T05:08:39.925Z">
+<meta property="og:updated_time" content="2016-09-22T14:24:52.194Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JEKYLL与HEXO的安装与使用">
 <meta name="twitter:description" content="本来没打算写这篇博客的，以为这些东西弄成功就算是会了，但当我想打开jekyll服务器的时候，突发现我已经忘记JEKYLL是怎么下载怎么使用的了。仔细想了想，当初安装的时候也是经历了不少曲折的，看了不少文章才解决的。由此可见记录的重要性，只有记录了下来，当忘记的时候才能方便的查看，而不用问度娘或者一遍一遍的翻看着官网的文档了。">
@@ -380,33 +380,50 @@
         <p>本来没打算写这篇博客的，以为这些东西弄成功就算是会了，但当我想打开jekyll服务器的时候，突发现我已经忘记JEKYLL是怎么下载怎么使用的了。仔细想了想，当初安装的时候也是经历了不少曲折的，看了不少文章才解决的。由此可见记录的重要性，只有记录了下来，当忘记的时候才能方便的查看，而不用问度娘或者一遍一遍的翻看着官网的文档了。</p>
 <a id="more"></a>
 <hr>
-<p>首先是Jekyll,虽然我已经没有使用Jekyll了，但Jekyll相较HEXO也是有着优点的，万一以后想用了呢？故此还是记录下来吧。<br>其实Jekyll并不是一定需要安装，GitHub使用的就是Jekyll，我们只需要在本地编写符合规范的网站源码，然后上传到username.github.io仓库中，就可以由github生成并托管整个网站了。安装Jekyll后，就能在本地搭建一个简单的服务器，<br>然后访问<a href="http://localhost:4000/就能看到blog的界面了。" target="_blank" rel="external">http://localhost:4000/就能看到blog的界面了。</a></p>
+<p>首先是Jekyll,虽然我已经没有使用Jekyll了，但Jekyll相较HEXO也是有着优点的，万一以后想用了呢？故此还是记录下来吧。<br>其实Jekyll并不是一定需要安装，GitHub使用的就是Jekyll，我们只需要在本地编写符合规范的网站源码，然后上传到username.github.io仓库中，就可以由github生成并托管整个网站了。安装Jekyll后，就能在本地搭建一个简单的服务器，<br>然后访问 <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> 就能看到blog的界面了。</p>
 <h2 id="Jekyll的安装"><a href="#Jekyll的安装" class="headerlink" title="Jekyll的安装"></a>Jekyll的安装</h2><p>首先是<a href="http://jekyll.bootcss.com/" target="_blank" rel="external">Jekyll官网</a>，官网的帮助是非常大的。<br>Jekyll官网上说并不建议在Windows系统安装，但其实也是很好安装的。</p>
-<p>1.安装ruby</p>
-<p>jekyll是基于ruby的，因此在安装jekyll之前得首先要安装ruby。<br><a href="http://rubyinstaller.org/downloads/" target="_blank" rel="external">ruby下载网站</a><br>根据自己电脑的情况选择合适的版本下载安装即可。<br>下载后双击进行安装，安装目录随意，但仔细看一下安装选项，注意将ruby命令添加到PATH变量下，使ruby命令能够在任何目录下进行使用。<br>安装完成后，打开cmd窗口或者其他shell窗口，用ruby -v测试一下，看看能不能输出ruby的版本号。</p>
-<p>2.安装Ruby DevKit</p>
-<p>DevKit 是windows平台下编译和使用本地C/C++扩展包的工具。它就是用来模拟Linux平台下的make, gcc, sh来进行编译。切换到刚才的下载页面，拉倒最下面，找到“DEVELOPMENT KIT”，然后选择合适的版本进行下载：<br>devkit的安装过程比较简单，选择你要安装的路径，直接进行下一步就可以了。安装成功后，使用gem -v测试是否安装成功。<br>安装成功后，运行如下两个命令：</p>
+<h3 id="安装ruby"><a href="#安装ruby" class="headerlink" title="安装ruby"></a>安装ruby</h3><p>jekyll是基于ruby的，因此在安装jekyll之前得首先要安装ruby。<br><a href="http://rubyinstaller.org/downloads/" target="_blank" rel="external">ruby下载网站</a><br>根据自己电脑的情况选择合适的版本下载安装即可。<br>下载后双击进行安装，安装目录随意，但仔细看一下安装选项，注意将ruby命令添加到PATH变量下，使ruby命令能够在任何目录下进行使用。<br>安装完成后，打开cmd窗口或者其他shell窗口，用ruby -v测试一下，看看能不能输出ruby的版本号。</p>
+<h3 id="安装Ruby-DevKit"><a href="#安装Ruby-DevKit" class="headerlink" title="安装Ruby DevKit"></a>安装Ruby DevKit</h3><p>DevKit 是windows平台下编译和使用本地C/C++扩展包的工具。它就是用来模拟Linux平台下的make, gcc, sh来进行编译。切换到刚才的下载页面，拉倒最下面，找到“DEVELOPMENT KIT”，然后选择合适的版本进行下载：<br>devkit的安装过程比较简单，选择你要安装的路径，直接进行下一步就可以了。安装成功后，使用gem -v测试是否安装成功。<br>安装成功后，运行如下两个命令：</p>
 <pre><code>ruby dk.rb init
 ruby dk.rb install
-</code></pre><p>3.安装jekyll</p>
-<pre><code>gem install jekyll
+</code></pre><h3 id="安装jekyll"><a href="#安装jekyll" class="headerlink" title="安装jekyll"></a>安装jekyll</h3><pre><code>gem install jekyll
 </code></pre><p>这是官方给的指令，但因为某些特殊的原因，我们直接使用rubygems的官方链接会特别特别的慢。不过庆幸的是，国内的淘宝有rubygem的镜像：</p>
 <pre><code>gem sources --remove https://rubygems.org/  // 删除官方链接
 gem sources -a https://ruby.taobao.org/     // 添加淘宝镜像链接
 gem sources -l                              // 查询是否替换成功
 </code></pre><p>在一串的提示命令之完成之后，就可以用jekyll -v测试jekyll是否安装成功了，如果能够输出版本号，就说明安装成功了。</p>
 <h2 id="Jekyll的使用"><a href="#Jekyll的使用" class="headerlink" title="Jekyll的使用"></a>Jekyll的使用</h2><p>Jekyll的配置先跳过，但具体的文章结构要跟配置文件相符。</p>
-<p>1.创建文章</p>
-<p>使用代码或者直接在_posts的目录下创建.md文件</p>
+<h3 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h3><p>使用代码或者直接在_posts的目录下创建.md文件</p>
 <pre><code>jekyll new my-awesome-site
-</code></pre><p>2.写作</p>
-<p>恩，Markdown语法。</p>
-<p>3.开启本地服务器。</p>
-<pre><code>cd my-awesome-site //进入站点目录
+</code></pre><h3 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h3><p>恩，Markdown语法。</p>
+<h3 id="开启本地服务器"><a href="#开启本地服务器" class="headerlink" title="开启本地服务器"></a>开启本地服务器</h3><pre><code>cd my-awesome-site //进入站点目录
 jekyll serve
 </code></pre><p>之后会显示一些信息，复制Server address，粘贴到浏览器就可以看到blog的界面了。</p>
 <p>按下ctrl-c就可以关闭服务器了。</p>
-<h2 id="HEXO的安装"><a href="#HEXO的安装" class="headerlink" title="HEXO的安装"></a>HEXO的安装</h2>
+<h3 id="部署方法"><a href="#部署方法" class="headerlink" title="部署方法"></a>部署方法</h3><p>直接打开GitHub，选择仓库然后Commit、Sync同步即可。博客网址为 username.github.io 。</p>
+<h2 id="HEXO的安装"><a href="#HEXO的安装" class="headerlink" title="HEXO的安装"></a>HEXO的安装</h2><p>HEXO的安装非常简单。本网站正在使用的就是HEXO，关于HEXO与Jekyll，可以参看下面这段话。</p>
+<blockquote>
+<p>一个是Ruby写的jekyll，一个是node-js写的hexo。至于区别的话，hexo生成静态页面的速度要比较快，jekyll是把原文上传github，可以直接生成博客，也可以用在线编辑器处理，hexo是本地生成html再上传。至于用哪个可以自己两个都尝试一下，哪个用的爽用哪个咯</p>
+</blockquote>
+<h3 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h3><p>这肯定是必须的，电脑里要有GitHub与Git shell。去GitHub官网下载，会同时安装GitHub desktop与Git shell,各有各的好处，可以配合起来使用。</p>
+<h3 id="安装Node-js"><a href="#安装Node-js" class="headerlink" title="安装Node.js"></a>安装Node.js</h3><p><a href="https://nodejs.org/en/" target="_blank" rel="external">下载地址</a></p>
+<p>下载安装即可。</p>
+<h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>所有必备应用程序安装完成后，即可使用npm安装Hexo。<br>在开始菜单找到Node.js command prompt ，输入如下命令：</p>
+<pre><code>npm install -g hexo-cli
+</code></pre><h2 id="HEXO的使用"><a href="#HEXO的使用" class="headerlink" title="HEXO的使用"></a>HEXO的使用</h2><p>HEXO的配置同样跳过，这不是本篇的重点，具体的文章结构也要跟主题与配置文件相符。</p>
+<h3 id="创建文章-1"><a href="#创建文章-1" class="headerlink" title="创建文章"></a>创建文章</h3><p>使用代码或者直接在source/_posts中创建.md文件</p>
+<pre><code>hexo new &quot;postName&quot; #新建文章
+其实是 $ hexo new [layout] &lt;title&gt;  layout默认为post
+layout有三种默认布局：post、page、draft
+</code></pre><h3 id="写作-1"><a href="#写作-1" class="headerlink" title="写作"></a>写作</h3><p>恩，Markdown语法。</p>
+<h3 id="生成与部署"><a href="#生成与部署" class="headerlink" title="生成与部署"></a>生成与部署</h3><pre><code>cd my-awesome-site //进入站点目录
+</code></pre><h4 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h4><pre><code>hexo generate #生成静态页面至public目录    
+</code></pre><h4 id="开启本地服务器-1"><a href="#开启本地服务器-1" class="headerlink" title="开启本地服务器"></a>开启本地服务器</h4><pre><code>hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）    
+</code></pre><h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><pre><code>hexo deploy #将.deploy目录部署到GitHub
+</code></pre><p>可以同时使用Coding与GitHub，需要先安装deployer-git</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre><p>然后在_config.yml中配置一下deploy就可以，配置不是本篇重点，具体还是看看官方文档吧。</p>
+
       
     </div>
 
@@ -627,7 +644,7 @@ jekyll serve
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jekyll的安装"><span class="nav-number">1.</span> <span class="nav-text">Jekyll的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jekyll的使用"><span class="nav-number">2.</span> <span class="nav-text">Jekyll的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXO的安装"><span class="nav-number">3.</span> <span class="nav-text">HEXO的安装</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Jekyll的安装"><span class="nav-number">1.</span> <span class="nav-text">Jekyll的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装ruby"><span class="nav-number">1.1.</span> <span class="nav-text">安装ruby</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Ruby-DevKit"><span class="nav-number">1.2.</span> <span class="nav-text">安装Ruby DevKit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装jekyll"><span class="nav-number">1.3.</span> <span class="nav-text">安装jekyll</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Jekyll的使用"><span class="nav-number">2.</span> <span class="nav-text">Jekyll的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建文章"><span class="nav-number">2.1.</span> <span class="nav-text">创建文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写作"><span class="nav-number">2.2.</span> <span class="nav-text">写作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启本地服务器"><span class="nav-number">2.3.</span> <span class="nav-text">开启本地服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#部署方法"><span class="nav-number">2.4.</span> <span class="nav-text">部署方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXO的安装"><span class="nav-number">3.</span> <span class="nav-text">HEXO的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Git"><span class="nav-number">3.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Node-js"><span class="nav-number">3.2.</span> <span class="nav-text">安装Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Hexo"><span class="nav-number">3.3.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HEXO的使用"><span class="nav-number">4.</span> <span class="nav-text">HEXO的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建文章-1"><span class="nav-number">4.1.</span> <span class="nav-text">创建文章</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#写作-1"><span class="nav-number">4.2.</span> <span class="nav-text">写作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#生成与部署"><span class="nav-number">4.3.</span> <span class="nav-text">生成与部署</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#生成"><span class="nav-number">4.3.1.</span> <span class="nav-text">生成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#开启本地服务器-1"><span class="nav-number">4.3.2.</span> <span class="nav-text">开启本地服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署"><span class="nav-number">4.3.3.</span> <span class="nav-text">部署</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>
