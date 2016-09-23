@@ -13,7 +13,7 @@
 <h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>For each case, print the Beiju text on the screen.</p>
 <h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><p>This_is<em>a</em>[Beiju]_text<br>[[]][][]Happy_Birthday_to_Tsinghua_University</p>
 <h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><p>BeijuThis_is_a__text<br>Happy_Birthday_to_Tsinghua_University</p>
-<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><p>给定一个字符串，内部含有”【“和”】“光标转移指令，</p>
+<h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><p>给定一个字符串，内部含有“【”和“】”光标转移指令，</p>
 <p>【代表光标移向文章头，】代表光标移向文章尾，问最终在屏幕上显示的字符串序列是？</p>
 <p>Cur代表当前光标的位置，en代表当前结束的位置。。。模拟输入就好了，用链表；</p>
 <p>链表，好题，代码好吊，看了半天，越看越感觉吊；</p>
