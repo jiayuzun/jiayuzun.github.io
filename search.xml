@@ -92,6 +92,8 @@ layout有三种默认布局：post、page、draft
 <h3 id="生成与部署"><a href="#生成与部署" class="headerlink" title="生成与部署"></a>生成与部署</h3><pre><code>cd my-awesome-site //进入站点目录
 </code></pre><h4 id="生成"><a href="#生成" class="headerlink" title="生成"></a>生成</h4><pre><code>hexo generate #生成静态页面至public目录    
 </code></pre><h4 id="开启本地服务器-1"><a href="#开启本地服务器-1" class="headerlink" title="开启本地服务器"></a>开启本地服务器</h4><pre><code>hexo server #开启预览访问端口（默认端口4000，&apos;ctrl + c&apos;关闭server）    
+</code></pre><h4 id="更新资料"><a href="#更新资料" class="headerlink" title="更新资料"></a>更新资料</h4><p>有时资料可能没有被更新，或是生成的文件与修改前的相同，可以尝试清除缓存并再执行一次。</p>
+<pre><code>hexo clean
 </code></pre><h4 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h4><pre><code>hexo deploy #将.deploy目录部署到GitHub
 </code></pre><p>可以同时使用Coding与GitHub，需要先安装deployer-git</p>
 <pre><code>npm install hexo-deployer-git --save
