@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ACM,算法," />
+  <meta name="keywords" content="ACM,题目,HDU," />
 
 
 
@@ -96,16 +96,16 @@
 
 
 
-<meta name="description" content="本文介绍的是LCA在线算法中的倍增算法。">
+<meta name="description" content="利用map的自动排序和lower_bound()">
 <meta property="og:type" content="article">
-<meta property="og:title" content="倍增算法 模板">
-<meta property="og:url" content="http://yoursite.com/2016/08/05/bz-template/index.html">
+<meta property="og:title" content="HDU 4585 Shaolin">
+<meta property="og:url" content="http://yoursite.com/2016/10/16/HDU-4585/index.html">
 <meta property="og:site_name" content="Welcome to JYZ's Blog!">
-<meta property="og:description" content="本文介绍的是LCA在线算法中的倍增算法。">
-<meta property="og:updated_time" content="2016-08-08T08:22:03.154Z">
+<meta property="og:description" content="利用map的自动排序和lower_bound()">
+<meta property="og:updated_time" content="2016-10-15T16:47:06.916Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="倍增算法 模板">
-<meta name="twitter:description" content="本文介绍的是LCA在线算法中的倍增算法。">
+<meta name="twitter:title" content="HDU 4585 Shaolin">
+<meta name="twitter:description" content="利用map的自动排序和lower_bound()">
 
 
 
@@ -126,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/05/bz-template/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/10/16/HDU-4585/"/>
 
-  <title> 倍增算法 模板 | Welcome to JYZ's Blog! </title>
+  <title> HDU 4585 Shaolin | Welcome to JYZ's Blog! </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -302,7 +302,7 @@
             
             
               
-                倍增算法 模板
+                HDU 4585 Shaolin
               
             
           </h1>
@@ -314,8 +314,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-05T13:48:30+08:00" content="2016-08-05">
-              2016-08-05
+            <time itemprop="dateCreated" datetime="2016-10-16T00:24:48+08:00" content="2016-10-16">
+              2016-10-16
             </time>
           </span>
 
@@ -328,8 +328,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/LCA（最近公共祖先）/" itemprop="url" rel="index">
-                    <span itemprop="name">LCA（最近公共祖先）</span>
+                  <a href="/categories/STL/" itemprop="url" rel="index">
+                    <span itemprop="name">STL</span>
                   </a>
                 </span>
 
@@ -344,8 +344,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/05/bz-template/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/05/bz-template/" itemprop="commentsCount"></span>
+                <a href="/2016/10/16/HDU-4585/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/10/16/HDU-4585/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -355,7 +355,7 @@
 
           
           
-             <span id="/2016/08/05/bz-template/" class="leancloud_visitors" data-flag-title="倍增算法 模板">
+             <span id="/2016/10/16/HDU-4585/" class="leancloud_visitors" data-flag-title="HDU 4585 Shaolin">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -377,28 +377,11 @@
       
 
       
-        <p>本文介绍的是LCA在线算法中的倍增算法。</p>
+        <p>利用map的自动排序和lower_bound()</p>
 <a id="more"></a>
-<hr>
-<p>不知道LCA定义？<a href="https://jiayuzun.github.io/2016/08/03/LCA-RMQ-ST-Template/" target="_blank" rel="external">请戳这儿</a></p>
-<hr>
-<h2 id="算法理论"><a href="#算法理论" class="headerlink" title="算法理论"></a>算法理论</h2><ul>
-<li>朴素算法：记录下每个节点的父亲，使节点u,v一步一步地向上找父亲，直到找到相同的“祖先”，即是<br>所求的答案，时间复杂度O(n)</li>
-<li>优化算法（倍增法）：利用二进制的思想，想办法使一步一步向上搜索变成以2^k的向上跳。所以<br>定义一个f[][]数组，使f[j][i]表示节点i的2^j倍祖先。</li>
-</ul>
-<h2 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h2><p>1.预处理出所有节点的深度和父节点</p>
-<pre><code>* BFS防止爆栈 无法处理孩子个数
-* DFS可能会爆栈 可以处理孩子个数 使用时建议扩栈
-</code></pre><p>2.处理各节点的所有祖先节点</p>
-<p>3.将所查询的两点上升到同一高度</p>
-<pre><code>* 找到祖先(以2^k的高度向上找)
-* 未找到祖先，同时上升高度至找到公共祖先
-</code></pre><hr>
-<h2 id="附加代码"><a href="#附加代码" class="headerlink" title="附加代码"></a>附加代码</h2><p>定义及初始化</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">pragma</span> comment(linker, <span class="meta-string">"/STACK:10240000000,10240000000"</span>)<span class="comment">//扩栈，要用c++交，用g++交并没有什么卵用。。。</span></span></div><div class="line"><span class="keyword">const</span> <span class="keyword">int</span> N = <span class="number">100005</span>;</div><div class="line"><span class="keyword">int</span> n , m , pre[N] , rt[N], mcnt;<span class="comment">//pre 邻接表数组  rt 求根节点 mcnt 邻接表下标变量</span></div><div class="line"><span class="keyword">bool</span> vis[N];</div><div class="line"><span class="keyword">struct</span> edge</div><div class="line">&#123;</div><div class="line">        <span class="keyword">int</span> x , next;</div><div class="line">&#125; e[N &lt;&lt; <span class="number">1</span>]; <span class="comment">//邻接表</span></div><div class="line"><span class="keyword">int</span> dep[N] , f[<span class="number">17</span>][N] , Lev , s[N];</div><div class="line"><span class="comment">//dep[]储存深度   1&lt;&lt;16 &lt; N  f[j][i] 表示i的第2^j个祖先 s[]孩子个数</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">        <span class="built_in">memset</span>(pre , <span class="number">-1</span> , <span class="keyword">sizeof</span>(pre));</div><div class="line">        <span class="built_in">memset</span>(rt, <span class="number">0</span>, <span class="keyword">sizeof</span>(rt));</div><div class="line">        mcnt = <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>算法函数</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">addedge</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span><span class="comment">//邻接表加边函数</span></span></div><div class="line">&#123;</div><div class="line">        e[mcnt].x = y,</div><div class="line">        e[mcnt].next = pre[x],</div><div class="line">        pre[x] = mcnt ++;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> x , <span class="keyword">int</span> fa)</span><span class="comment">///也可以用bfs，但bfs不能统计节点孩子个数</span></span></div><div class="line">&#123;</div><div class="line">        dep[x] = dep[fa] + <span class="number">1</span>;</div><div class="line">        f[<span class="number">0</span>][x] = fa , s[x] = <span class="number">1</span>;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = pre[x] ; i!=<span class="number">-1</span> ; i = e[i].next)</div><div class="line">        &#123;</div><div class="line">                <span class="keyword">int</span> y = e[i].x;</div><div class="line">                <span class="keyword">if</span> (y != fa)</div><div class="line">                &#123;</div><div class="line">                        dfs(y , x);</div><div class="line">                        s[x] += s[y];<span class="comment">///节点x的孩子个数</span></div><div class="line">                &#125;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//	dfs处理后，要进一步处理得到节点的所有祖先</span></div><div class="line"><span class="comment">//	for (j = 1 ; 1 &lt;&lt; j &lt; n ; ++ j)</span></div><div class="line"><span class="comment">//		for (i = 1 ; i &lt;= n ; ++ i)</span></div><div class="line"><span class="comment">//		&#123;</span></div><div class="line"><span class="comment">//			f[j][i] = f[j - 1][f[j - 1][i]];</span></div><div class="line"><span class="comment">//		&#125;</span></div><div class="line"><span class="comment">//	Lev = j - 1;</span></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span> rt)</span><span class="comment">///不需要求孩子个数，同时防止暴栈</span></span></div><div class="line">&#123;</div><div class="line">        <span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</div><div class="line">        q.push(rt);</div><div class="line">        f[<span class="number">0</span>][rt] = <span class="number">0</span>, dep[rt] = <span class="number">1</span>, vis[rt] = <span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span> (!q.empty())</div><div class="line">        &#123;</div><div class="line">                <span class="keyword">int</span> fa = q.front();</div><div class="line">                q.pop();</div><div class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> i = pre[fa] ; ~i ; i = e[i].next)</div><div class="line">                &#123;</div><div class="line">                        <span class="keyword">int</span> x = e[i].x;</div><div class="line">                        <span class="keyword">if</span> (!vis[x])</div><div class="line">                        &#123;</div><div class="line">                                dep[x] = dep[fa] + <span class="number">1</span>;</div><div class="line">                                f[<span class="number">0</span>][x] = fa , vis[x] = <span class="number">1</span>;</div><div class="line">                                q.push(x);</div><div class="line">                        &#125;</div><div class="line">                &#125;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">LCA</span><span class="params">(<span class="keyword">int</span> x , <span class="keyword">int</span> y)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">if</span> (dep[x] &gt; dep[y])</div><div class="line">        &#123;</div><div class="line">                swap(x , y);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = Lev ; i &gt;= <span class="number">0</span> ; -- i)<span class="comment">///找y的第dep[y] - dep[x]个祖先</span></div><div class="line">                <span class="keyword">if</span> (dep[y] - dep[x] &gt;&gt; i &amp; <span class="number">1</span>)<span class="comment">//dep[y]-dep[x]刚好比2的i次方大时</span></div><div class="line">                &#123;</div><div class="line">                        y = f[i][y];</div><div class="line">                &#125;</div><div class="line">        <span class="keyword">if</span> (x == y)</div><div class="line">        &#123;</div><div class="line">                <span class="keyword">return</span> y;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = Lev ; i &gt;= <span class="number">0</span> ; -- i)<span class="comment">//同一高度后开始找祖先</span></div><div class="line">                <span class="keyword">if</span> (f[i][x] != f[i][y])<span class="comment">//不停的上次2的i次方，直到i==0</span></div><div class="line">                &#123;</div><div class="line">                        x = f[i][x] , y = f[i][y];</div><div class="line">                &#125;</div><div class="line">        <span class="keyword">return</span> f[<span class="number">0</span>][x];</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">get_kth_anc</span><span class="params">(<span class="keyword">int</span> x , <span class="keyword">int</span> k)</span> <span class="comment">///找x的第k个祖先</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span> ; i &lt;= Lev ; ++ i)</div><div class="line">                <span class="keyword">if</span> (k &gt;&gt; i &amp; <span class="number">1</span>)</div><div class="line">                &#123;</div><div class="line">                        x = f[i][x];</div><div class="line">                &#125;</div><div class="line">        <span class="keyword">return</span> x;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
+<p>题目链接<a href="http://acm.hdu.edu.cn/showproblem.php?pid=4585" target="_blank" rel="external">HDU 4585</a></p>
+<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>少林寺选拔和尚，有n个和尚，每个和尚有编号和武力值（所有和尚武力值都不相同），编号代表入寺的时间，少林寺方丈最早，编号为1，武力值为1000000000。每个新和尚入少林寺都要比赛，和老和尚中武力与他最为接近的一个老和尚比赛（反正都确定能进少林寺了），若存在两个老和尚和新和尚的武力值差值一样，则新和尚和两个老和尚中武力值少的一个比赛。少林寺方丈把比赛记录搞丢了，但知道和尚的入寺时间的先后顺序，让你输出每个和尚的编号和与他比赛的和尚的编号。</p>
+<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;functional&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">int</span> n;</div><div class="line">        <span class="keyword">while</span>(<span class="built_in">cin</span>&gt;&gt;n,n)</div><div class="line">        &#123;</div><div class="line">                <span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt; mp;</div><div class="line">                mp.clear();</div><div class="line">                <span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="keyword">int</span>&gt;::iterator it;</div><div class="line">                mp[<span class="number">1000000000</span>]=<span class="number">1</span>;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt;n;k++)</div><div class="line">                &#123;</div><div class="line">                        <span class="keyword">int</span> a,b;</div><div class="line">                        <span class="built_in">cin</span>&gt;&gt;a&gt;&gt;b;</div><div class="line">                        <span class="built_in">cout</span>&lt;&lt;a&lt;&lt;<span class="string">" "</span>;</div><div class="line">                        it=mp.lower_bound(b);</div><div class="line">                        <span class="keyword">if</span>(it==mp.end())</div><div class="line">                        &#123;</div><div class="line">                                <span class="built_in">cout</span>&lt;&lt;it-&gt;second&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">                        &#125;</div><div class="line">                        <span class="keyword">else</span> <span class="keyword">if</span>(it==mp.begin())</div><div class="line">                        &#123;</div><div class="line">                                <span class="built_in">cout</span>&lt;&lt;it-&gt;second&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">                        &#125;</div><div class="line">                        <span class="keyword">else</span></div><div class="line">                        &#123;</div><div class="line">                                <span class="keyword">int</span> y1=it-&gt;first;</div><div class="line">                                <span class="keyword">int</span> x1=it-&gt;second;</div><div class="line">                                it--;</div><div class="line">                                <span class="keyword">int</span> x2=it-&gt;second;</div><div class="line">                                <span class="keyword">int</span> y2=it-&gt;first;</div><div class="line">                                <span class="keyword">if</span>((b-y2)&lt;=(y1-b))</div><div class="line">                                &#123;</div><div class="line">                                        <span class="built_in">cout</span>&lt;&lt;x2&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">                                &#125;</div><div class="line">                                <span class="keyword">else</span></div><div class="line">                                &#123;</div><div class="line">                                        <span class="built_in">cout</span>&lt;&lt;x1&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">                                &#125;</div><div class="line">                        &#125;</div><div class="line">                        mp[b]=a;</div><div class="line">                &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -443,7 +426,9 @@
           
             <a href="/tags/ACM/" rel="tag">#ACM</a>
           
-            <a href="/tags/算法/" rel="tag">#算法</a>
+            <a href="/tags/题目/" rel="tag">#题目</a>
+          
+            <a href="/tags/HDU/" rel="tag">#HDU</a>
           
         </div>
       
@@ -452,17 +437,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/03/LCA-RMQ-ST-Template/" rel="next" title="LCA-RMQ-ST 模板">
-                <i class="fa fa-chevron-left"></i> LCA-RMQ-ST 模板
+              <a href="/2016/10/15/UVA-514/" rel="next" title="UVA 514 Rails">
+                <i class="fa fa-chevron-left"></i> UVA 514 Rails
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/05/poj-1330/" rel="prev" title="POJ 1330 Nearest Common Ancestors">
-                POJ 1330 Nearest Common Ancestors <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -511,8 +492,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/05/bz-template/"
-           data-title="倍增算法 模板" data-url="http://yoursite.com/2016/08/05/bz-template/">
+      <div class="ds-thread" data-thread-key="2016/10/16/HDU-4585/"
+           data-title="HDU 4585 Shaolin" data-url="http://yoursite.com/2016/10/16/HDU-4585/">
       </div>
     
   </div>
@@ -623,7 +604,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法理论"><span class="nav-number">1.</span> <span class="nav-text">算法理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法实现"><span class="nav-number">2.</span> <span class="nav-text">算法实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附加代码"><span class="nav-number">3.</span> <span class="nav-text">附加代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目大意"><span class="nav-number">1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC代码"><span class="nav-number">2.</span> <span class="nav-text">AC代码</span></a></li></ol></div>
             
           </div>
         </section>
