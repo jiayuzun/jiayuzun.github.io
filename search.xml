@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title><![CDATA[二分、三分查找算法]]></title>
+      <url>http://yoursite.com/2016/11/29/%E4%BA%8C%E5%88%86%E3%80%81%E4%B8%89%E5%88%86%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/</url>
+      <content type="html"><![CDATA[<p>二分、三分查找算法的原理及实现代码。</p>
+<a id="more"></a>
+<h2 id="简单定义"><a href="#简单定义" class="headerlink" title="简单定义"></a>简单定义</h2><p>在一个单调有序的集合中查找元素，每次将集合分为左右两部分，判断解在哪个部分中并调整集合上下界，重复直到找到目标元素。</p>
+<h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>O (logn)，优于直接顺序查找O(n)</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p><img src="https://github.com/jiayuzun/photo/blob/master/%E4%BA%8C%E5%88%86%E4%B8%89%E5%88%86/QQ%E6%88%AA%E5%9B%BE20161129225142.png?raw=true" alt="photo"></p>
+<h2 id="左闭右开二分"><a href="#左闭右开二分" class="headerlink" title="左闭右开二分"></a>左闭右开二分</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">search2</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> n, <span class="keyword">int</span> v)</span>        </span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">int</span> left, right, middle;</div><div class="line"></div><div class="line">    left = <span class="number">0</span>, right = n;                      <span class="comment">//左闭右开区间的二分查找。</span></div><div class="line"></div><div class="line">    <span class="keyword">while</span> (left &lt; right)</div><div class="line">    &#123;</div><div class="line">        middle = (left + right) / <span class="number">2</span>;</div><div class="line">        <span class="keyword">if</span> (<span class="built_in">array</span>[middle] &gt; v)</div><div class="line">            right = middle;</div><div class="line">        <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">array</span>[middle] &lt; v)</div><div class="line">            left = middle + <span class="number">1</span>;</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="keyword">return</span> middle;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="STL"><a href="#STL" class="headerlink" title="STL"></a>STL</h2><p><img src="https://github.com/jiayuzun/photo/blob/master/%E4%BA%8C%E5%88%86%E4%B8%89%E5%88%86/QQ%E6%88%AA%E5%9B%BE20161129225511.png?raw=true" alt="photo"></p>
+<h2 id="Double型二分"><a href="#Double型二分" class="headerlink" title="Double型二分"></a>Double型二分</h2><pre><code>while(fabs(right-left)&gt;eps)//判断语句
+注：1、right与left之差进行判断
+    2、eps的值够精度，不然很容易wa
+</code></pre><h2 id="三分法"><a href="#三分法" class="headerlink" title="三分法"></a>三分法</h2><p>在二分查找的基础上，在右区间（或左区间）再进行一次二分，这样的查找算法称为三分查找，也就是三分</p>
+<p>当需要求某凸性或凹形函数的极值，通过函数本身表达式并不容易求解时，就可以用三分法不断逼近求解。</p>
+<p><img src="https://github.com/jiayuzun/photo/blob/master/%E4%BA%8C%E5%88%86%E4%B8%89%E5%88%86/QQ%E6%88%AA%E5%9B%BE20161129230014.png?raw=true" alt="photo"></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[HDU 1010 Tempter of the Bone]]></title>
       <url>http://yoursite.com/2016/11/27/HDU-1010/</url>
       <content type="html"><![CDATA[<p>DFS加奇偶剪枝</p>
