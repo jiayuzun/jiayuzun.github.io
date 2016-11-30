@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ACM,题目,HDU," />
 
 
 
@@ -96,15 +96,16 @@
 
 
 
-<meta name="description" content="本站记录我学习之旅的沿途风景！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Welcome to JYZ's Blog!">
-<meta property="og:url" content="http://yoursite.com/categories/Blog/index.html">
+<meta name="description" content="完全背包问题或者直接贪心">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HDU 1248 寒冰王座">
+<meta property="og:url" content="http://yoursite.com/2016/11/30/HDU-1248/index.html">
 <meta property="og:site_name" content="Welcome to JYZ's Blog!">
-<meta property="og:description" content="本站记录我学习之旅的沿途风景！">
+<meta property="og:description" content="完全背包问题或者直接贪心">
+<meta property="og:updated_time" content="2016-11-30T07:02:58.849Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome to JYZ's Blog!">
-<meta name="twitter:description" content="本站记录我学习之旅的沿途风景！">
+<meta name="twitter:title" content="HDU 1248 寒冰王座">
+<meta name="twitter:description" content="完全背包问题或者直接贪心">
 
 
 
@@ -125,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/Blog/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/30/HDU-1248/"/>
 
-  <title> 分类: Blog | Welcome to JYZ's Blog! </title>
+  <title> HDU 1248 寒冰王座 | Welcome to JYZ's Blog! </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -158,7 +159,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-right  ">
+  <div class="container one-collumn sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -280,131 +281,214 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        Blog
-        <small>分类</small>
-      </h2>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/28/Coding部署问题/" itemprop="url">
-              
-                <span itemprop="name">Coding部署问题</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-28T16:09:38+08:00"
-              content="2016-09-28" >
-          09-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/22/JEKYLL与HEXO的安装与使用/" itemprop="url">
-              
-                <span itemprop="name">JEKYLL与HEXO的安装与使用</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-22T12:03:36+08:00"
-              content="2016-09-22" >
-          09-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/08/08/将博客从jekyll迁移到Hexo/" itemprop="url">
-              
-                <span itemprop="name">将博客从jekyll迁移到Hexo</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-08T18:21:33+08:00"
-              content="2016-08-08" >
-          08-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/08/03/first-blog/" itemprop="url">
-              
-                <span itemprop="name">我的第一篇博客</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-08-03T11:09:32+08:00"
-              content="2016-08-03" >
-          08-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
+  
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                HDU 1248 寒冰王座
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-30T14:51:42+08:00" content="2016-11-30">
+              2016-11-30
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/DP/" itemprop="url" rel="index">
+                    <span itemprop="name">DP</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/11/30/HDU-1248/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/30/HDU-1248/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/11/30/HDU-1248/" class="leancloud_visitors" data-flag-title="HDU 1248 寒冰王座">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>完全背包问题或者直接贪心</p>
+<a id="more"></a>
+<p>题目链接<a href="http://acm.hdu.edu.cn/showproblem.php?pid=1248" target="_blank" rel="external">HDU 1248</a></p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>Time Limit: 2000/1000 MS (Java/Others)    Memory Limit: 65536/32768 K (Java/Others)</p>
+<p>Problem Description<br>不死族的巫妖王发工资拉,死亡骑士拿到一张N元的钞票(记住,只有一张钞票),为了防止自己在战斗中频繁的死掉,他决定给自己买一些道具,于是他来到了地精商店前.<br>死亡骑士:”我要买道具!”<br>地精商人:”我们这里有三种道具,血瓶150块一个,魔法药200块一个,无敌药水350块一个.”<br>死亡骑士:”好的,给我一个血瓶.”<br>说完他掏出那张N元的大钞递给地精商人.<br>地精商人:”我忘了提醒你了,我们这里没有找客人钱的习惯的,多的钱我们都当小费收了的,嘿嘿.”<br>死亡骑士:”……”<br>死亡骑士想,与其把钱当小费送个他还不如自己多买一点道具,反正以后都要买的,早点买了放在家里也好,但是要尽量少让他赚小费.<br>现在死亡骑士希望你能帮他计算一下,最少他要给地精商人多少小费.</p>
+<p>Input<br>输入数据的第一行是一个整数T(1&lt;=T&lt;=100),代表测试数据的数量.然后是T行测试数据,每个测试数据只包含一个正整数N(1&lt;=N&lt;=10000),N代表死亡骑士手中钞票的面值.<br>注意:地精商店只有题中描述的三种道具.</p>
+<p>Output<br>对于每组测试数据,请你输出死亡骑士最少要浪费多少钱给地精商人作为小费.</p>
+<p>Sample Input<br>2<br>900<br>250</p>
+<p>Sample Output<br>0<br>50</p>
+<h2 id="完全背包AC代码"><a href="#完全背包AC代码" class="headerlink" title="完全背包AC代码"></a>完全背包AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;functional&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">int</span> value[<span class="number">4</span>]=&#123;<span class="number">0</span>,<span class="number">150</span>,<span class="number">200</span>,<span class="number">350</span>&#125;;</div><div class="line"><span class="keyword">int</span> dp[<span class="number">10010</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">int</span> t;</div><div class="line">        <span class="built_in">cin</span>&gt;&gt;t;</div><div class="line">        <span class="keyword">while</span>(t--)</div><div class="line">        &#123;</div><div class="line">                <span class="keyword">int</span> n;</div><div class="line">                <span class="built_in">cin</span>&gt;&gt;n;</div><div class="line">                <span class="built_in">memset</span>(dp,<span class="number">0</span>,<span class="keyword">sizeof</span>(dp));</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">3</span>;i++)</div><div class="line">                &#123;</div><div class="line">                        <span class="keyword">for</span>(<span class="keyword">int</span> j=value[i];j&lt;=n;j++)</div><div class="line">                        &#123;</div><div class="line">                                <span class="keyword">if</span>(dp[j]&lt;=dp[j-value[i]]+value[i])</div><div class="line">                                &#123;</div><div class="line">                                        dp[j]=dp[j-value[i]]+value[i];</div><div class="line">                                &#125;</div><div class="line">                        &#125;</div><div class="line">                &#125;</div><div class="line">                <span class="built_in">cout</span>&lt;&lt;n-dp[n]&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="贪心AC代码"><a href="#贪心AC代码" class="headerlink" title="贪心AC代码"></a>贪心AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">/*</span></div><div class="line">题解：350为150和200的和，所以可以不买350的，用150和200的药水代替即可。</div><div class="line">然后150和200又可以拆成150+0和150+50，首先看能买多少150的药水</div><div class="line">然后可以在每瓶的基础上加50元或者不加，这样就能留下最少的小费给地精商人</div><div class="line">(PS：地精连死亡骑士的小费都敢收，不怕被砍？)</div><div class="line">*/</div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span>  </span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;  </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span>  </span></div><div class="line">&#123;  </div><div class="line">    <span class="keyword">int</span> t,n;  </div><div class="line">    <span class="built_in">cin</span>&gt;&gt;t;  </div><div class="line">    <span class="keyword">while</span>(t--)  </div><div class="line">    &#123;  </div><div class="line">        <span class="built_in">cin</span>&gt;&gt;n;  </div><div class="line">        <span class="keyword">int</span> sum=n;  </div><div class="line">        <span class="keyword">int</span> s1=sum/<span class="number">150</span>;  </div><div class="line">        sum=sum%<span class="number">150</span>;  </div><div class="line">        <span class="keyword">if</span>(sum/<span class="number">50</span>&lt;=s1)  </div><div class="line">        &#123;  </div><div class="line">            sum=sum%<span class="number">50</span>;  </div><div class="line">        &#125;  </div><div class="line">        <span class="keyword">else</span>  </div><div class="line">        &#123;  </div><div class="line">            sum=sum-(<span class="number">50</span>*s1);  </div><div class="line">        &#125;  </div><div class="line">        <span class="built_in">cout</span>&lt;&lt;sum&lt;&lt;<span class="built_in">endl</span>;  </div><div class="line">    &#125;  </div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="https://raw.githubusercontent.com/jiayuzun/photo/master/%E4%BA%8C%E7%BB%B4%E7%A0%81/wechatpay.jpg" alt="JYZ WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="https://raw.githubusercontent.com/jiayuzun/photo/master/%E4%BA%8C%E7%BB%B4%E7%A0%81/alipay.jpg" alt="JYZ Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ACM/" rel="tag">#ACM</a>
+          
+            <a href="/tags/题目/" rel="tag">#题目</a>
+          
+            <a href="/tags/HDU/" rel="tag">#HDU</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/30/DP-01背包/" rel="next" title="DP 01背包模板">
+                <i class="fa fa-chevron-left"></i> DP 01背包模板
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style">
+  <a class="jiathis_button_tsina"></a>
+  <a class="jiathis_button_tqq"></a>
+  <a class="jiathis_button_weixin"></a>
+  <a class="jiathis_button_cqq"></a>
+  <a class="jiathis_button_douban"></a>
+  <a class="jiathis_button_renren"></a>
+  <a class="jiathis_button_qzone"></a>
+  <a class="jiathis_button_kaixin001"></a>
+  <a class="jiathis_button_copy"></a>
+  <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+  <a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+  var jiathis_config={
+    hideMore:false
+  }
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+<!-- JiaThis Button END -->
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -412,6 +496,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/11/30/HDU-1248/"
+           data-title="HDU 1248 寒冰王座" data-url="http://yoursite.com/2016/11/30/HDU-1248/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -431,8 +523,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
@@ -502,6 +603,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#完全背包AC代码"><span class="nav-number">2.</span> <span class="nav-text">完全背包AC代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#贪心AC代码"><span class="nav-number">3.</span> <span class="nav-text">贪心AC代码</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -598,6 +710,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
