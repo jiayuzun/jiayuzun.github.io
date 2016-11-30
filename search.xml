@@ -4,6 +4,29 @@
   
     
     <entry>
+      <title><![CDATA[DP 01背包模板]]></title>
+      <url>http://yoursite.com/2016/11/30/DP-01%E8%83%8C%E5%8C%85/</url>
+      <content type="html"><![CDATA[<p>01背包问题DP的思想及模板</p>
+<a id="more"></a>
+<h2 id="01背包问题"><a href="#01背包问题" class="headerlink" title="01背包问题"></a>01背包问题</h2><p>已知自己背包的总容积m，现在有n件商品，每件商品的价值Value和体积Weight均已知，每件商品只能取一次或者不取，问背包可以容纳的最大价值为多少？</p>
+<pre><code>        n=5  m=23
+
+下标   1   2   3   4    5
+ v     19  24  23  45  50
+ w     5   6   8   11  12
+</code></pre><h2 id="二维dp数组解法"><a href="#二维dp数组解法" class="headerlink" title="二维dp数组解法"></a>二维dp数组解法</h2><p>dp[i][j]表示对于第i个商品，占用体积为j时可获得的最大价值。<br>图片中行数为i，列数为j。dp数组是从上往下从前往后更新着的。</p>
+<p><img src="https://github.com/jiayuzun/photo/blob/master/DP/QQ%E6%88%AA%E5%9B%BE20161130133320.png?raw=true" alt="photo"></p>
+<pre><code>状态转移方程：
+dp[i][j]=max{dp[i-1}[j],dp[i-1][j-w[i]]+v[i]}
+</code></pre><p>dp[i][j]的值是根据dp[i-1][j]与dp[i-1][j-w[i]]+v[i]来决定的。简单来说，是通过左上角的已经得到的dp数组来更新右下角的dp数组。建议自己看着表格和状态转移方程想一想这个dp数组填写的过程。</p>
+<h2 id="一维滚动dp数组"><a href="#一维滚动dp数组" class="headerlink" title="一维滚动dp数组"></a>一维滚动dp数组</h2><p>无疑滚动数组是比二维数组更好的解法。用这个方法的前提是你搞明白了上面那个算法。如果物品个数和体积比较大的话，二维dp数组就会开的很大，有些题目往往开不出来或者Memory Limit Exceeded。因此，就有了进化版解法。</p>
+<p>对于01背包问题，我们只需要用到上一行同列和上一行左列的dp信息。因此，我们可以采用与二维数组同样的解决方式，但把这些信息只储存在一行。</p>
+<pre><code>dp[j]=max{dp[j],dp[j-w]+v}//需要反向更新
+</code></pre><p>反向更新这样不难理解。更新dp时需要用到前面的数组，从最后面的数组开始更新才能保证正确性。若从前更新，等到更新到后面时，前面的数组已经不是我们想要的上一行的数组而是更新之后的本行的数组了。</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[POJ 3624 Charm Bracelet]]></title>
       <url>http://yoursite.com/2016/11/30/POJ-3624/</url>
       <content type="html"><![CDATA[<p>01背包问题，使用常规二维dp数组会Memory Limit Exceeded。因此使用1维dp数组，从后往前遍历。(建议先理解理解常规二维dp数组，再思考本题)</p>

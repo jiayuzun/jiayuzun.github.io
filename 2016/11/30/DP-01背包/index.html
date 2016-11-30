@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="随笔,GitHub," />
+  <meta name="keywords" content="ACM,算法," />
 
 
 
@@ -96,16 +96,18 @@
 
 
 
-<meta name="description" content="HEXO官网 与 NexT官网这两个官网可以解决所有问题">
+<meta name="description" content="01背包问题DP的思想及模板">
 <meta property="og:type" content="article">
-<meta property="og:title" content="将博客从jekyll迁移到Hexo">
-<meta property="og:url" content="http://yoursite.com/2016/08/08/将博客从jekyll迁移到Hexo/index.html">
+<meta property="og:title" content="DP 01背包模板">
+<meta property="og:url" content="http://yoursite.com/2016/11/30/DP-01背包/index.html">
 <meta property="og:site_name" content="Welcome to JYZ's Blog!">
-<meta property="og:description" content="HEXO官网 与 NexT官网这两个官网可以解决所有问题">
-<meta property="og:updated_time" content="2016-09-28T08:08:37.052Z">
+<meta property="og:description" content="01背包问题DP的思想及模板">
+<meta property="og:image" content="https://github.com/jiayuzun/photo/blob/master/DP/QQ%E6%88%AA%E5%9B%BE20161130133320.png?raw=true">
+<meta property="og:updated_time" content="2016-11-30T06:01:04.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="将博客从jekyll迁移到Hexo">
-<meta name="twitter:description" content="HEXO官网 与 NexT官网这两个官网可以解决所有问题">
+<meta name="twitter:title" content="DP 01背包模板">
+<meta name="twitter:description" content="01背包问题DP的思想及模板">
+<meta name="twitter:image" content="https://github.com/jiayuzun/photo/blob/master/DP/QQ%E6%88%AA%E5%9B%BE20161130133320.png?raw=true">
 
 
 
@@ -126,9 +128,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/08/08/将博客从jekyll迁移到Hexo/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/11/30/DP-01背包/"/>
 
-  <title> 将博客从jekyll迁移到Hexo | Welcome to JYZ's Blog! </title>
+  <title> DP 01背包模板 | Welcome to JYZ's Blog! </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -302,7 +304,7 @@
             
             
               
-                将博客从jekyll迁移到Hexo
+                DP 01背包模板
               
             
           </h1>
@@ -314,8 +316,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-08T18:21:33+08:00" content="2016-08-08">
-              2016-08-08
+            <time itemprop="dateCreated" datetime="2016-11-30T13:25:17+08:00" content="2016-11-30">
+              2016-11-30
             </time>
           </span>
 
@@ -328,8 +330,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Blog/" itemprop="url" rel="index">
-                    <span itemprop="name">Blog</span>
+                  <a href="/categories/DP/" itemprop="url" rel="index">
+                    <span itemprop="name">DP</span>
                   </a>
                 </span>
 
@@ -344,8 +346,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/08/08/将博客从jekyll迁移到Hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/08/将博客从jekyll迁移到Hexo/" itemprop="commentsCount"></span>
+                <a href="/2016/11/30/DP-01背包/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/30/DP-01背包/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -355,7 +357,7 @@
 
           
           
-             <span id="/2016/08/08/将博客从jekyll迁移到Hexo/" class="leancloud_visitors" data-flag-title="将博客从jekyll迁移到Hexo">
+             <span id="/2016/11/30/DP-01背包/" class="leancloud_visitors" data-flag-title="DP 01背包模板">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -377,12 +379,24 @@
       
 
       
-        <p><a href="https://hexo.io/" target="_blank" rel="external">HEXO官网</a> 与 <a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT官网</a><br>这两个官网可以解决所有问题<br><a id="more"></a></p>
-<h2 id="缘起"><a href="#缘起" class="headerlink" title="缘起"></a>缘起</h2><p>本来只是想上网看看jekyll进阶教程，改一改自己的博客，添加一些个性化的元素，<br>奈何jekyll对新手真是太不友好了，本来写博客就是为了巩固暑假的学的一些算法，并没有时间去仔细琢磨jekyll。<br>后来发现网上一大堆“从jekyll迁移到HEXO“的博客，再我自己浏览了一些HEXO的模板，<br>小清新的风格和便于上手的操作吸引了我，于是便有了这一番的折腾。</p>
-<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>HEXO确实比jekyll好上手的多，花点心思看看<a href="https://hexo.io/" target="_blank" rel="external">HEXO官网</a>，搭建博客遇到的问题基本都能在官网找<br>到答案。具体的一些指令我也不一一在本文中记录了，去官网浏览远比看我记录的指令要好。<br>搭建博客过程中含参考了另一篇博客<a href="http://www.alonemonkey.com/2016/05/20/blog-by-jekyll-hexo/" target="_blank" rel="external">使用jekyll和hexo搭建免费博客</a>,<br>这个博客本身就是用HEXO搭建的，它分别介绍了用jekyll和HEXO搭建博客的过程，讲解的非常详细，易上手。<br>博客配置过程中全靠<a href="http://theme-next.iissnan.com/" target="_blank" rel="external">NexT官网</a>,各种插件各种参数都一一举例，我也是将官网整个的看了一遍。  </p>
-<h2 id="文档迁移"><a href="#文档迁移" class="headerlink" title="文档迁移"></a>文档迁移</h2><p>把<code>_posts</code>文件夹内的所有文件复制到<code>source/_posts</code>文件夹，并在<code>_config.yml</code>中修改<code>new_post_name</code>参数。</p>
-<pre><code>new_post_name: :year-:month-:day-:title.md
-</code></pre>
+        <p>01背包问题DP的思想及模板</p>
+<a id="more"></a>
+<h2 id="01背包问题"><a href="#01背包问题" class="headerlink" title="01背包问题"></a>01背包问题</h2><p>已知自己背包的总容积m，现在有n件商品，每件商品的价值Value和体积Weight均已知，每件商品只能取一次或者不取，问背包可以容纳的最大价值为多少？</p>
+<pre><code>        n=5  m=23
+
+下标   1   2   3   4    5
+ v     19  24  23  45  50
+ w     5   6   8   11  12
+</code></pre><h2 id="二维dp数组解法"><a href="#二维dp数组解法" class="headerlink" title="二维dp数组解法"></a>二维dp数组解法</h2><p>dp[i][j]表示对于第i个商品，占用体积为j时可获得的最大价值。<br>图片中行数为i，列数为j。dp数组是从上往下从前往后更新着的。</p>
+<p><img src="https://github.com/jiayuzun/photo/blob/master/DP/QQ%E6%88%AA%E5%9B%BE20161130133320.png?raw=true" alt="photo"></p>
+<pre><code>状态转移方程：
+dp[i][j]=max{dp[i-1}[j],dp[i-1][j-w[i]]+v[i]}
+</code></pre><p>dp[i][j]的值是根据dp[i-1][j]与dp[i-1][j-w[i]]+v[i]来决定的。简单来说，是通过左上角的已经得到的dp数组来更新右下角的dp数组。建议自己看着表格和状态转移方程想一想这个dp数组填写的过程。</p>
+<h2 id="一维滚动dp数组"><a href="#一维滚动dp数组" class="headerlink" title="一维滚动dp数组"></a>一维滚动dp数组</h2><p>无疑滚动数组是比二维数组更好的解法。用这个方法的前提是你搞明白了上面那个算法。如果物品个数和体积比较大的话，二维dp数组就会开的很大，有些题目往往开不出来或者Memory Limit Exceeded。因此，就有了进化版解法。</p>
+<p>对于01背包问题，我们只需要用到上一行同列和上一行左列的dp信息。因此，我们可以采用与二维数组同样的解决方式，但把这些信息只储存在一行。</p>
+<pre><code>dp[j]=max{dp[j],dp[j-w]+v}//需要反向更新
+</code></pre><p>反向更新这样不难理解。更新dp时需要用到前面的数组，从最后面的数组开始更新才能保证正确性。若从前更新，等到更新到后面时，前面的数组已经不是我们想要的上一行的数组而是更新之后的本行的数组了。</p>
+
       
     </div>
 
@@ -425,9 +439,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随笔/" rel="tag">#随笔</a>
+            <a href="/tags/ACM/" rel="tag">#ACM</a>
           
-            <a href="/tags/GitHub/" rel="tag">#GitHub</a>
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
         </div>
       
@@ -436,17 +450,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/07/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2016/11/30/POJ-3624/" rel="next" title="POJ 3624 Charm Bracelet">
+                <i class="fa fa-chevron-left"></i> POJ 3624 Charm Bracelet
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/08/12/poj-1979/" rel="prev" title="poj 1979 Red and Black">
-                poj 1979 Red and Black <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -495,8 +505,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/08/08/将博客从jekyll迁移到Hexo/"
-           data-title="将博客从jekyll迁移到Hexo" data-url="http://yoursite.com/2016/08/08/将博客从jekyll迁移到Hexo/">
+      <div class="ds-thread" data-thread-key="2016/11/30/DP-01背包/"
+           data-title="DP 01背包模板" data-url="http://yoursite.com/2016/11/30/DP-01背包/">
       </div>
     
   </div>
@@ -607,7 +617,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#缘起"><span class="nav-number">1.</span> <span class="nav-text">缘起</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档迁移"><span class="nav-number">3.</span> <span class="nav-text">文档迁移</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#01背包问题"><span class="nav-number">1.</span> <span class="nav-text">01背包问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二维dp数组解法"><span class="nav-number">2.</span> <span class="nav-text">二维dp数组解法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一维滚动dp数组"><span class="nav-number">3.</span> <span class="nav-text">一维滚动dp数组</span></a></li></ol></div>
             
           </div>
         </section>
