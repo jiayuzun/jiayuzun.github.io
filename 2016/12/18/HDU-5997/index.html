@@ -80,7 +80,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="ACM,题目,POJ," />
+  <meta name="keywords" content="ACM,题目,HDU," />
 
 
 
@@ -96,16 +96,16 @@
 
 
 
-<meta name="description" content="01背包问题，使用常规二维dp数组会Memory Limit Exceeded。因此使用1维dp数组，从后往前遍历。(建议先理解理解常规二维dp数组，再思考本题)dp 背包问题模板链接">
+<meta name="description" content="预处理加树状数组进行优化">
 <meta property="og:type" content="article">
-<meta property="og:title" content="POJ 3624 Charm Bracelet">
-<meta property="og:url" content="http://yoursite.com/2016/11/30/POJ-3624/index.html">
+<meta property="og:title" content="HDU 5997 rausen loves cakes">
+<meta property="og:url" content="http://yoursite.com/2016/12/18/HDU-5997/index.html">
 <meta property="og:site_name" content="Welcome to JYZ's Blog!">
-<meta property="og:description" content="01背包问题，使用常规二维dp数组会Memory Limit Exceeded。因此使用1维dp数组，从后往前遍历。(建议先理解理解常规二维dp数组，再思考本题)dp 背包问题模板链接">
-<meta property="og:updated_time" content="2016-11-30T06:09:26.139Z">
+<meta property="og:description" content="预处理加树状数组进行优化">
+<meta property="og:updated_time" content="2016-12-18T02:51:56.421Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="POJ 3624 Charm Bracelet">
-<meta name="twitter:description" content="01背包问题，使用常规二维dp数组会Memory Limit Exceeded。因此使用1维dp数组，从后往前遍历。(建议先理解理解常规二维dp数组，再思考本题)dp 背包问题模板链接">
+<meta name="twitter:title" content="HDU 5997 rausen loves cakes">
+<meta name="twitter:description" content="预处理加树状数组进行优化">
 
 
 
@@ -126,9 +126,9 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/11/30/POJ-3624/"/>
+  <link rel="canonical" href="http://yoursite.com/2016/12/18/HDU-5997/"/>
 
-  <title> POJ 3624 Charm Bracelet | Welcome to JYZ's Blog! </title>
+  <title> HDU 5997 rausen loves cakes | Welcome to JYZ's Blog! </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -302,7 +302,7 @@
             
             
               
-                POJ 3624 Charm Bracelet
+                HDU 5997 rausen loves cakes
               
             
           </h1>
@@ -314,8 +314,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-11-30T00:21:55+08:00" content="2016-11-30">
-              2016-11-30
+            <time itemprop="dateCreated" datetime="2016-12-18T10:11:41+08:00" content="2016-12-18">
+              2016-12-18
             </time>
           </span>
 
@@ -328,8 +328,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/DP/" itemprop="url" rel="index">
-                    <span itemprop="name">DP</span>
+                  <a href="/categories/好题/" itemprop="url" rel="index">
+                    <span itemprop="name">好题</span>
                   </a>
                 </span>
 
@@ -344,8 +344,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/11/30/POJ-3624/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/11/30/POJ-3624/" itemprop="commentsCount"></span>
+                <a href="/2016/12/18/HDU-5997/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/12/18/HDU-5997/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -355,7 +355,7 @@
 
           
           
-             <span id="/2016/11/30/POJ-3624/" class="leancloud_visitors" data-flag-title="POJ 3624 Charm Bracelet">
+             <span id="/2016/12/18/HDU-5997/" class="leancloud_visitors" data-flag-title="HDU 5997 rausen loves cakes">
                &nbsp; | &nbsp;
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -377,11 +377,12 @@
       
 
       
-        <p>01背包问题，使用常规二维dp数组会Memory Limit Exceeded。<br>因此使用1维dp数组，从后往前遍历。(建议先理解理解常规二维dp数组，再思考本题)<br><a href="http://jiayuzun.coding.me/2016/11/30/DP-01%E8%83%8C%E5%8C%85/" target="_blank" rel="external">dp 背包问题模板链接</a></p>
+        <p>预处理加树状数组进行优化</p>
 <a id="more"></a>
-<p>题目链接<a href="http://poj.org/problem?id=3624" target="_blank" rel="external">POJ 3624</a></p>
-<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>背包问题，给你背包体积M及N个物品。给出物品体积和价值，求背包最大价值。<br>但由于体积和物品数过大，所有无法开出二维数组。但dp[i][j]中遍历第i个商品这个操作其实是可以隐含起来的。对于第X个商品，需要比较dp[x-1][j]与dp[x-1][j-X.w]+X.d，就是只需要通过前一行的某个小体积的dp数组值来更新得到新状态，因此我们可以从大体积往小体积遍历，将结果直接存在dp数组中。简单来说，就是将dp[i][j]中的i行全部合在一行了。</p>
-<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;functional&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">struct</span> charm</div><div class="line">&#123;</div><div class="line">        <span class="keyword">int</span> w,d;</div><div class="line">&#125;a[<span class="number">3410</span>];</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(charm a,charm b)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">if</span>(a.w==b.w)</div><div class="line">        &#123;</div><div class="line">                <span class="keyword">return</span> a.d&gt;b.d;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> a.w&lt;b.w;</div><div class="line">&#125;</div><div class="line"><span class="keyword">int</span> dp[<span class="number">13000</span>];<span class="comment">//dp[j]表示体积为j时最大价值，但注意这里省略了dp[i][j]中的i。</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">int</span> n,m;</div><div class="line">        <span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">        &#123;</div><div class="line">                <span class="built_in">cin</span>&gt;&gt;a[i].w&gt;&gt;a[i].d;</div><div class="line">        &#125;</div><div class="line">        sort(a+<span class="number">1</span>,a+n+<span class="number">1</span>,cmp);</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">        &#123;</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> j=m;j&gt;=<span class="number">0</span>;j--)</div><div class="line">                &#123;</div><div class="line">                        <span class="keyword">if</span>(j&gt;=a[i].w&amp;&amp;dp[j-a[i].w]+a[i].d&gt;dp[j])</div><div class="line">                        &#123;</div><div class="line">                                dp[j]=dp[j-a[i].w]+a[i].d;</div><div class="line">                        &#125;</div><div class="line">                &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="built_in">cout</span>&lt;&lt;dp[m]&lt;&lt;<span class="built_in">endl</span>;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>题目链接<a href="http://acm.hdu.edu.cn/showproblem.php?pid=5997" target="_blank" rel="external">HDU 5997</a></p>
+<h2 id="题目大意"><a href="#题目大意" class="headerlink" title="题目大意"></a>题目大意</h2><p>给你一个数组，数组中的数代表颜色，有两种操作，一是将数组中的X替换为Y，二是查询数组的某一子区间[x,y]中有多少段颜色。</p>
+<h2 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h2><p>本题对时间要求较高。常规操作会超时，因此需要优化操作。<br>有多种优化。最初我只优化了修改操作，建立一个map表，并不真正修改数组中的值，而是直接map[x]=y，查询时取数组中的map值即可，但这种操作需要循环遍历整个数组来判断颜色段数，因此超时。之后我想到用树状数组来优化查询操作，动态维护树状数组b[]，若节点i产生颜色变化,则节点i的值设为1，则update(i,1),因此查询时只需要sum[y]-sum[x]+1即可得到颜色段数。但当修改时，仍然需要for循环遍历，将某个位置的颜色x改为颜色y时，对不同的情况进行不同的维护操作。但仍然超时。后来受到同伴的启发，我们可以开个map<int,vector<int>&gt;，提前记录某个颜色的所有位置，将for循环遍历改为启发式的vector遍历，就能压着时间线过了。</int,vector<int></p>
+<h2 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h2><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;set&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;map&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stack&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cmath&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstdio&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bitset&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iomanip&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;cstring&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;functional&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> maxn 100010</span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"><span class="keyword">int</span> a[maxn];</div><div class="line"><span class="keyword">int</span> n,q;</div><div class="line"><span class="keyword">int</span> b[maxn];<span class="comment">//树状数组</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">lowbit</span><span class="params">(<span class="keyword">int</span> x)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">return</span> x &amp; (-x);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">void</span>  <span class="title">update</span><span class="params">(<span class="keyword">int</span> i,  <span class="keyword">int</span> x)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">while</span> (i &lt;= n)</div><div class="line">        &#123;</div><div class="line">                b[i] = b[i] + x;</div><div class="line">                i += lowbit(i);</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">sum</span><span class="params">(<span class="keyword">int</span> i)</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">int</span>  ans = <span class="number">0</span>;</div><div class="line">        <span class="keyword">while</span> (i &gt; <span class="number">0</span>)</div><div class="line">        &#123;</div><div class="line">                ans += b[i];</div><div class="line">                i -= lowbit(i);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> ans;</div><div class="line">&#125;</div><div class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt; mp;<span class="comment">//启发式，记录某个颜色的位置</span></div><div class="line"><span class="built_in">map</span>&lt;<span class="keyword">int</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; &gt;::iterator itt;</div><div class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;::iterator it;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">        <span class="keyword">int</span> t;</div><div class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;t);</div><div class="line">        <span class="keyword">while</span>(t--)</div><div class="line">        &#123;</div><div class="line">                mp.clear();</div><div class="line">                <span class="built_in">scanf</span>(<span class="string">"%d %d"</span>,&amp;n,&amp;q);</div><div class="line">                <span class="built_in">memset</span>(b,<span class="number">0</span>,<span class="keyword">sizeof</span>(b));</div><div class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</div><div class="line">                &#123;</div><div class="line">                        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);</div><div class="line">                        <span class="keyword">if</span>(a[i]!=a[i<span class="number">-1</span>])<span class="comment">//将产生颜色变化的位置记录为1</span></div><div class="line">                        &#123;</div><div class="line">                                update(i,<span class="number">1</span>);</div><div class="line">                        &#125;</div><div class="line">                        mp[a[i]].push_back(i);<span class="comment">//记录某个颜色的位置</span></div><div class="line">                &#125;</div><div class="line">                <span class="keyword">while</span>(q--)</div><div class="line">                &#123;</div><div class="line">                        <span class="keyword">int</span> op,x,y;</div><div class="line">                        <span class="built_in">scanf</span>(<span class="string">"%d %d %d"</span>,&amp;op,&amp;x,&amp;y);</div><div class="line">                        <span class="keyword">if</span>(op==<span class="number">1</span>&amp;x!=y)</div><div class="line">                        &#123;</div><div class="line"></div><div class="line">                                <span class="keyword">for</span>(it=mp[x].begin();it!=mp[x].end();it++)</div><div class="line">                                &#123;</div><div class="line">                                        <span class="keyword">int</span> i=*it;<span class="comment">//根据情况维护树状数组</span></div><div class="line">                                        <span class="keyword">if</span>(x==a[i<span class="number">-1</span>]&amp;&amp;y!=a[i<span class="number">-1</span>])</div><div class="line">                                        &#123;</div><div class="line">                                                update(i,<span class="number">1</span>);</div><div class="line">                                        &#125;</div><div class="line">                                        <span class="keyword">else</span> <span class="keyword">if</span>(x!=a[i<span class="number">-1</span>]&amp;&amp;y==a[i<span class="number">-1</span>])</div><div class="line">                                        &#123;</div><div class="line">                                                update(i,<span class="number">-1</span>);</div><div class="line">                                        &#125;</div><div class="line">                                        <span class="keyword">if</span>(x==a[i+<span class="number">1</span>]&amp;&amp;y!=a[i+<span class="number">1</span>])</div><div class="line">                                        &#123;</div><div class="line">                                                update(i+<span class="number">1</span>,<span class="number">1</span>);</div><div class="line">                                        &#125;</div><div class="line">                                        <span class="keyword">else</span> <span class="keyword">if</span>(x!=a[i+<span class="number">1</span>]&amp;&amp;y==a[i+<span class="number">1</span>])</div><div class="line">                                        &#123;</div><div class="line">                                                update(i+<span class="number">1</span>,<span class="number">-1</span>);</div><div class="line">                                        &#125;</div><div class="line">                                        a[i]=y;</div><div class="line">                                        mp[y].push_back(i);<span class="comment">//维护map</span></div><div class="line">                                &#125;</div><div class="line">                                mp[x].clear(); <span class="comment">//维护map</span></div><div class="line">                        &#125;</div><div class="line">                        <span class="keyword">else</span> <span class="keyword">if</span>(op==<span class="number">2</span>)</div><div class="line">                        &#123;</div><div class="line">                                <span class="keyword">int</span> ans=sum(y)-sum(x)+<span class="number">1</span>;</div><div class="line">                                <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</div><div class="line">                        &#125;</div><div class="line">                &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -428,7 +429,7 @@
           
             <a href="/tags/题目/" rel="tag">#题目</a>
           
-            <a href="/tags/POJ/" rel="tag">#POJ</a>
+            <a href="/tags/HDU/" rel="tag">#HDU</a>
           
         </div>
       
@@ -437,17 +438,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/11/29/二分、三分查找算法/" rel="next" title="二分、三分查找算法模板">
-                <i class="fa fa-chevron-left"></i> 二分、三分查找算法模板
+              <a href="/2016/12/06/HDU-1240/" rel="next" title="HDU 1240 Asteroids!">
+                <i class="fa fa-chevron-left"></i> HDU 1240 Asteroids!
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/11/30/DP-01背包/" rel="prev" title="DP 01背包模板">
-                DP 01背包模板 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -496,8 +493,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/11/30/POJ-3624/"
-           data-title="POJ 3624 Charm Bracelet" data-url="http://yoursite.com/2016/11/30/POJ-3624/">
+      <div class="ds-thread" data-thread-key="2016/12/18/HDU-5997/"
+           data-title="HDU 5997 rausen loves cakes" data-url="http://yoursite.com/2016/12/18/HDU-5997/">
       </div>
     
   </div>
@@ -608,7 +605,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目大意"><span class="nav-number">1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC代码"><span class="nav-number">2.</span> <span class="nav-text">AC代码</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目大意"><span class="nav-number">1.</span> <span class="nav-text">题目大意</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#题目解析"><span class="nav-number">2.</span> <span class="nav-text">题目解析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AC代码"><span class="nav-number">3.</span> <span class="nav-text">AC代码</span></a></li></ol></div>
             
           </div>
         </section>
